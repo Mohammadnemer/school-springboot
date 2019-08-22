@@ -47,4 +47,8 @@ public class AdminController {
 	public ResponseEntity<?> deleteAdmin(@PathVariable long id){
 		return adminService.deleteAdmin(id);
 	}
+	@PostMapping("/login")
+	public ResponseEntity<?> loginUser(@Valid @RequestBody Admin admin) {
+		return adminService.login(admin);
+	}
 }

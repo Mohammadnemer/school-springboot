@@ -48,4 +48,18 @@ public class AdminService {
 	  adminRepository.delete(adminId);
 	  return ResponseEntity.ok().build();
 	}
+	public ResponseEntity<?> login(Admin adminDetails) {
+		
+		List<Admin> admin= getAllAdmins();
+		boolean  check = false;
+		for(int i=0;i<admin.size();i++) {
+			if(admin.get(i).getUsername() == adminDetails.getUsername()) {
+				 check = true; 
+			}
+		}
+		if(check)
+			return ResponseEntity.ok().build();
+		else
+			return ResponseEntity.notFound().build();
+	}
 }
