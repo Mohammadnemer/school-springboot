@@ -1,5 +1,6 @@
 package com.example.demo.api.admin;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -20,6 +21,10 @@ public class Admin {
 	
 	@NotBlank
 	private String username;
+	
+	
+	@Column(columnDefinition = "varchar(255) default '1234'")
+	private String password;
 	
 	@NotBlank
 	private String firstName;
@@ -50,6 +55,14 @@ public class Admin {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getFirstName() {
@@ -91,6 +104,7 @@ public class Admin {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
 	
 	
 }

@@ -2,7 +2,6 @@ package com.example.demo.api.admin;
 
 import java.util.List;
 
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,12 +33,12 @@ public class AdminController {
 	}
 	
 	@PostMapping("/admins")
-	public Admin createAdmin(@Valid @RequestBody Admin admin) {
+	public Admin createAdmin(@RequestBody Admin admin) {
 		return adminService.createAdmin(admin);
 	}
 	
 	@PutMapping("/admins/{id}")
-	public Admin updateAdmin(@Valid @RequestBody Admin admin , @PathVariable long id) {
+	public Admin updateAdmin(@RequestBody Admin admin , @PathVariable long id) {
 		return adminService.updateAdmin(admin, id);
 	}
 	
@@ -48,7 +47,7 @@ public class AdminController {
 		return adminService.deleteAdmin(id);
 	}
 	@PostMapping("/login")
-	public ResponseEntity<?> loginUser(@Valid @RequestBody Admin admin) {
+	public boolean loginUser(@RequestBody Admin admin) {
 		return adminService.login(admin);
 	}
 }

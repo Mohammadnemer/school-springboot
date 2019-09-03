@@ -27,7 +27,7 @@ public class Student {
 	@NotBlank
 	private String email;
 	
-	@NotBlank
+	
 	private String address;
 	
 	@NotBlank
