@@ -5,6 +5,6 @@ public class Teacher {
 
   }
   public int sum(){
-    return  10;
+    return  20;
   }
 }
