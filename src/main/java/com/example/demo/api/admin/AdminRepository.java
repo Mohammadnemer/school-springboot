@@ -1,7 +1,7 @@
-package com.example.demo.api.admin;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface AdminRepository extends JpaRepository<Admin, Long> {
-
-}
+//package com.example.demo.api.admin;
+//
+//import org.springframework.data.jpa.repository.JpaRepository;
+//
+//public interface AdminRepository extends JpaRepository<Admin, Long> {
+//
+//}
