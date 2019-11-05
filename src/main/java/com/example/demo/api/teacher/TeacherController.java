@@ -10,20 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TeacherController {
-    @RestController
     @RequestMapping("/api")
-    @CrossOrigin(origins = "http://localhost:4200")
-    public class AdminController {
-
-
-        @GetMapping("/admins")
-        public List<String> getAllAdmins(){
-            List<String> s =  new ArrayList<>();
-            s.add("Hello");
-            s.add("Docker");
-            s.add("with java");
-            return s;
-        }
-
+    @GetMapping("/teacher")
+    public List<String> getAllAdmins(){
+        List<String> s =  new ArrayList<>();
+        s.add("Hello");
+        s.add("Docker");
+        s.add("with java");
+        return s;
     }
+
 }
