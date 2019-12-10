@@ -1,4 +1,4 @@
-package com.example.demo.api.teacher;
-
-public class Teacher {
-}
+//package com.example.demo.api.teacher;
+//
+//public class Teacher {
+//}
