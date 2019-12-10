@@ -4,7 +4,7 @@ node{
   }
   stage('Compile-Package'){
       def mvn =  tool name: 'Maven', type: 'maven'
-      sh '${mvn}/bin'
+      sh '${mvn}/bin/mvn'
         }
 
   }
