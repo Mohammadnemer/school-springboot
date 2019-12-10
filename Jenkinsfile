@@ -3,8 +3,7 @@ node{
     git 'https://github.com/Mohammadnemer/school-springboot'
   }
   stage('Compile-Package'){
-      def mvn =  tool name: 'Maven', type: 'maven'
-      sh '${mvn}/bin/mvn package'
+      sh 'mvn-package'
         }
 
   }
